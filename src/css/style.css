@@ -1,0 +1,1107 @@
+@import url('fonts.css');
+@import url('hamburgers.min.css');
+
+
+
+section[class=promotions],
+section[class="whereToGo"],
+section[class="shops"],
+section[class="foodcourt"],
+section[class="supermarket"],
+section[class='socialnetworks'],
+section[class='renter'] {
+    margin-left: 320px;
+    padding: 0 20px 20px 20px;
+}
+
+.promotions-title,
+.whereToGo-title,
+.shops-title,
+.foodcourt-title,
+.supermarket-title,
+.socialnetworks-title,
+.renter-title {
+    font-family: MullerBold;
+    line-height: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 40px 0 20px;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.body-hidden {
+    overflow: hidden;
+    position: fixed;
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #F7F7F7;
+}
+
+#menuhamburger,
+#close {
+    width: 50%;
+    cursor: pointer;
+}
+
+.menu {
+    width: 320px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+
+}
+
+.menu-item--left {
+    width: 60px;
+    height: 100%;
+    background: #E31E4C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-item--right {
+    width: 260px;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+.logo {
+    position: absolute;
+    top: 5%;
+}
+
+.logo svg {
+    width: 100%;
+}
+
+.menu-links {
+    list-style: none;
+    padding-left: 20px;
+    position: absolute;
+    top: calc(100vh - 50% - 100px);
+}
+
+.menu-links>li {
+    font-family: MullerBold;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.menu-links>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+.social {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 55%;
+    left: 0;
+    right: 0;
+}
+
+.social svg:hover {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+}
+
+.social svg:hover path[stroke="black"] {
+    stroke: #E31E4C;
+}
+
+.menu-hidden {
+    display: flex;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: calc(-100vw - 60px);
+    width: calc(100% - 60px);
+    max-width: 1380px;
+    height: 100vh;
+    z-index: 0;
+    background: rgb(255, 255, 255);
+    margin-left: 60px;
+}
+
+.animate-hidden-open {
+    z-index: 1000;
+
+    left: auto;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: linear;
+    transition-delay: .5s;
+}
+
+
+.menu-hidden--right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 80px 30px 60px 30px;
+    position: relative;
+    overflow: auto;
+}
+
+.menu-hidden--search {
+    display: block;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+}
+
+.menu-hidden--search h2 {
+    font-family: MullerBold;
+    line-height: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.menu-hidden--search input {
+    background: #FFFFFF;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 20px;
+    border: none;
+    width: 100%;
+}
+
+.menu-hidden--search input:focus {
+    outline: none;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-hidden--search input:placeholder-shown {
+    font-family: Muller;
+    line-height: 20px;
+    font-size: 18px;
+    color: #BFBFBF;
+}
+
+.menu-hidden--search---suggested {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 -5px 0 -5px;
+}
+
+.menu-hidden--search---suggested figure {
+    position: relative;
+    text-align: center;
+    margin: 5px;
+}
+
+.menu-hidden--search---suggested img {
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-hidden--search---suggested img:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+    opacity: .25;
+}
+
+.menu-hidden--search---suggested figcaption {
+    position: absolute;
+    font-family: Muller;
+    line-height: 20px;
+    font-size: 14px;
+    top: calc(50% - 10px);
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.menu-hidden--search---suggested a:hover {
+    color: #E31E4C;
+}
+
+.menu-hidden--links {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+.menu-hidden--links---group {
+    display: flex;
+    flex-direction: column;
+    font-family: MullerBold;
+}
+
+.menu-hidden--links---group a {
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.menu-hidden--links---group a:hover {
+    color: #E31E4C;
+}
+
+.menu-hidden--right---social {
+    left: 4%;
+    margin: 0;
+    position: inherit;
+}
+
+.menu-hidden--right---social svg {
+    width: 40px;
+}
+
+.promotions-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: stretch;
+    grid-template-areas:
+        'promoMain promoMain promoMain2 promoMain2'
+        'promoMain promoMain promoMain3 promoMain4'
+}
+
+.promotions-items--1 {
+    grid-area: promoMain;
+}
+
+.promotions-items--2 {
+    grid-area: promoMain2;
+}
+
+.promotions-items--3 {
+    grid-area: promoMain3;
+}
+
+.promotions-items--4 {
+    grid-area: promoMain4;
+}
+
+.whereToGo-items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+
+}
+
+.whereToGo-items figure {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.whereToGo-items>figure>figcaption {
+    font-family: MullerBold;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.whereToGo-items>figure svg:hover path,
+.whereToGo-items>figure svg:hover rect {
+    stroke: #E31E4C;
+}
+
+.whereToGo-items>figure svg:hover path[fill="black"] {
+    fill: #E31E4C
+}
+
+.whereToGo-items>figure svg:hover,
+.whereToGo-items>figure a:hover {
+    color: #E31E4C
+}
+
+.whereToGo-items svg {
+    width: 120px;
+    height: 120px
+}
+
+.shops-items {
+    padding: 0 15px;
+}
+
+.shops-items .row:first-child {
+    margin-bottom: 20px;
+}
+
+.shops-items .row:last-child {
+    margin-top: 40px;
+}
+
+.shops figure {
+    max-height: 240px;
+    border-radius: 4px;
+}
+
+.shops-items figure:hover figcaption>a {
+    color: #E31E4C;
+}
+
+.shops figure:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.shops figure img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+    width: 100%;
+    max-height: 200px;
+}
+
+.shops figure img:hover {
+    filter: blur(1px)
+}
+
+.shops figure figcaption {
+    background: white;
+    text-align: center;
+    font-family: MullerBold;
+    line-height: 40px;
+    font-size: 14px;
+    height: 40px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.foodcourt-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    min-height: 350px;
+}
+
+.foodcourt figure {
+    position: relative;
+    max-width: 240px;
+    max-height: 140px;
+    margin: 5px;
+}
+
+.foodcourt figure:hover a>img:first-child {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: blur(1px);
+}
+
+.foodcourt figure img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+}
+
+
+.foodcourt .img-smart {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.foodcourt figure figcaption {
+    background: white;
+    text-align: left;
+    font-family: MullerBold;
+    line-height: 40px;
+    font-size: 14px;
+    padding-left: 20px;
+    height: 40px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.foodcourt figure:hover figcaption>a {
+    color: #E31E4C
+}
+
+
+
+.supermarket-video--block:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+}
+
+.supermarket-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.supermarket-content--text {
+    background: #ffffff;
+    padding: 20px 30px 0 40px;
+    margin-top: 30px;
+    flex-basis: 73%;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.supermarket-content--text h3 {
+    font-family: MullerBold;
+    line-height: 30px;
+    font-size: 24px;
+    padding: 0;
+}
+
+.supermarket-content--text p {
+    font-family: Muller;
+    line-height: 24px;
+    font-size: 18px;
+}
+
+.supermarket-content--group {
+    margin-top: 30px;
+    text-align: left;
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.supermarket-content--group svg {
+    max-width: 240px;
+}
+
+.supermarket-content--group hr {
+    background: #D8D8D8;
+    height: 1px;
+    border: none;
+    margin: 20px 0;
+}
+
+.supermarket-content--group---links {
+    text-align: left;
+}
+
+.supermarket-content--group---links h4 {
+    font-family: MullerBold;
+    line-height: 20px;
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.supermarket-content--group---links p {
+    font-family: Muller;
+    line-height: 30px;
+    font-size: 24px;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.supermarket-content--group---links ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.supermarket-content--group---links li {
+    font-family: MullerBold;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.socialnetworks-group {
+    display: flex;
+    /* margin: -20px; */
+}
+
+.socialnetworks-intagram,
+.socialnetworks-vkfb {
+    flex-basis: 50%;
+    margin: 20px;
+}
+
+.socialnetworks-intagram {
+    background: white;
+}
+
+.socialnetworks-intagram .header {
+    background: radial-gradient(529.53px at 0% 100%, #F8D709 0%, #E7132E 49.8%, #7A37AB 100%);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.socialnetworks-intagram h3 {
+    font-family: Muller;
+    color: #FFFFFF;
+    line-height: 30px;
+    font-size: 24px;
+    text-align: center;
+    mix-blend-mode: normal;
+    margin: 0;
+}
+
+.socialnetworks-intagram p {
+    font-family: Muller;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+    margin: 0;
+}
+
+.socialnetworks-intagram .main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.socialnetworks-intagram .main a {
+    display: inline-block;
+    flex-basis: 30%;
+}
+
+.socialnetworks-intagram .main img {
+    object-fit: cover;
+}
+
+.socialnetworks-intagram .footer {
+    width: 100%;
+    padding: 0 30px 30px 30px;
+}
+
+
+.socialnetworks-intagram button {
+    width: 100%;
+    font-family: MullerBold;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #E31E4C;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.socialnetworks-vkfb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.socialnetworks-vkfb .socialnetworks-vk {
+    background: #4A76A8;
+}
+
+.socialnetworks-vkfb .socialnetworks-fb {
+    background: #4367B2;
+}
+
+.socialnetworks-vk,
+.socialnetworks-fb {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    text-align: center;
+    flex-basis: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialnetworks-vk h3,
+.socialnetworks-fb h3 {
+    font-family: MullerBold;
+    line-height: 30px;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.socialnetworks-vk p,
+.socialnetworks-fb p {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.socialnetworks-vk button,
+.socialnetworks-fb button {
+    background: #FFFFFF;
+    border-radius: 2px;
+    font-family: MullerBold;
+    line-height: normal;
+    font-size: 14px;
+    text-align: center;
+    color: #4367B2;
+    border: none;
+    width: 140px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.renter-group {
+    display: flex;
+
+}
+
+.renter-info--title>svg {
+    vertical-align: super;
+}
+
+.renter-info {
+    max-width: 400px;
+    background: white;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-right: 30px;
+}
+
+.renter-info h3 {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 70px;
+    font-size: 64px;
+    color: #E31E4C;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.renter-info p {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 24px;
+    color: #000000;
+    margin: 0 0 20px;
+}
+
+.renter-info button {
+    background: #E31E4C;
+    border-radius: 2px;
+    font-family: MullerBold;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    width: 200px;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.renter-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.renter-info ul>li {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.renter-info ul>li:hover {
+    text-decoration: underline;
+}
+
+
+@media all and (max-width: 1200px) {
+
+    .menu-hidden--right {
+        padding: 10px;
+    }
+
+    .menu-hidden--links---group a {
+        line-height: 41px;
+        font-size: 24px;
+    }
+
+    .whereToGo-items figure {
+        width: 150px;
+        height: 150px;
+    }
+
+    .socialnetworks-intagram,
+    .socialnetworks-vkfb {
+        margin: 10px;
+    }
+
+    .socialnetworks-intagram .main {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+
+    .renter-info h3 {
+        font-size: 50px;
+    }
+}
+
+@media all and (max-width: 992px) {
+
+    .menu {
+        width: auto;
+    }
+
+    section[class=promotions],
+    section[class="whereToGo"],
+    section[class="shops"],
+    section[class="foodcourt"],
+    section[class="supermarket"],
+    section[class='socialnetworks'],
+    section[class='renter'] {
+        margin-left: 60px;
+    }
+
+    .menu-item--right {
+        display: none;
+    }
+
+    .menu-hidden--right {
+        padding: 10px;
+    }
+
+    .menu-hidden--links---group a {
+        line-height: 35px;
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    .menu-hidden--links---group a {
+        line-height: 34px;
+        font-size: 18px;
+    }
+
+    .menu-hidden--right {
+      display: block;
+    }
+
+    .menu-hidden--right---social svg {
+        width: 30px;
+    }
+
+
+    .renter-group {
+        flex-direction: column;
+    }
+
+    .renter-info {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .renter-ilustrations {
+        margin-top: 30px;
+    }
+}
+
+@media all and (max-width: 576px) {
+
+    .promotions-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-areas:
+            'promoMain promoMain'
+            'promoMain2 promoMain2'
+            'promoMain3 promoMain4'
+    }
+
+
+    .supermarket-content {
+        flex-direction: column;
+    }
+
+    .menu-hidden--right {
+        padding: 5px;
+    }
+
+
+    .menu-hidden--search input {
+        padding: 10px;
+        width: 100%;
+    }
+
+
+    .menu-hidden--search---suggested {
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .menu-hidden--search---suggested figure {
+        padding: 0;
+        height: 100px;
+    }
+
+
+    .menu-hidden--links {
+        margin-top: 10px;
+        flex-grow: 1;
+    }
+
+
+    .menu-hidden--links---group a {
+        line-height: 20px;
+        font-size: 14px;
+    }
+
+
+    .menu-hidden--right---social {
+        left: 0;
+        margin: 0;
+        bottom: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .menu-hidden--right---social svg {
+        width: 30px;
+        margin: 0 10px;
+    }
+
+}
+
+@media all and (max-width: 450px) {
+
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        background: #E31E4C;
+    }
+
+    .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+        background: #E31E4C;
+    }
+
+
+    section[class=promotions],
+    section[class="whereToGo"],
+    section[class="shops"],
+    section[class="foodcourt"],
+    section[class="supermarket"],
+    section[class='socialnetworks'],
+    section[class='renter'] {
+        margin-left: 0px;
+        padding: 10px 5px 5px;
+    }
+
+    .promotions-title,
+    .whereToGo-title,
+    .shops-title,
+    .foodcourt-title,
+    .supermarket-title,
+    .socialnetworks-title,
+    .renter-title {
+        padding: 10px 0 10px;
+    }
+
+
+    .menu {
+        width: 100vw;
+        z-index: 5;
+        height: 60px;
+        position: relative;
+        top: 0;
+    }
+
+    .menu-item--left {
+        width: 100vw;
+        justify-content: space-between;
+        background: white;
+    }
+
+    .menu-item--left svg {
+        width: 60px;
+        height: 60px;
+        background: white;
+        margin-left: 10px;
+    }
+
+    .menu-item--right {
+        display: none;
+    }
+
+    .menu-hidden {
+        margin-left: 0;
+        width: 100vw;
+        position: fixed;
+        height: calc(100% - 60px);
+        overflow: scroll;
+        margin-top: 60px;
+    }
+
+    .animate-hidden-open {
+        z-index: 2;
+    }
+    
+    .menu-hidden--links {
+      flex-wrap: wrap
+    }
+    
+    .menu-hidden--links---group {
+      flex-basis: 50%;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .promotions-title {
+        padding-top: 20px;
+    }
+
+    .whereToGo-items figure {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    .shops figure {
+        margin: 5px;
+    }
+
+
+    .foodcourt figure {
+        max-width: 160px;
+        margin: 5px;
+    }
+
+
+    .foodcourt .img-smart {
+        top: 5px;
+        left: 5px;
+    }
+
+
+
+    .supermarket-content--text {
+        padding: 5px 10px;
+    }
+
+    .supermarket-content--text h3 {
+        line-height: 20px;
+        font-size: 22px;
+    }
+
+    .supermarket-content--group {
+        margin-left: 10px;
+    }
+
+    .socialnetworks-group {
+        flex-direction: column;
+    }
+
+    .socialnetworks-intagram .main {
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .socialnetworks-intagram .main a {
+        width: 120px;
+        height: 120px;
+        margin: 5px;
+    }
+
+    .socialnetworks-intagram .footer {
+        padding: 10px;
+    }
+
+    .socialnetworks-vkfb .socialnetworks-vk {
+        height: 130px;
+    }
+
+    .socialnetworks-vkfb .socialnetworks-fb {
+        height: 130px;
+    }
+
+    .socialnetworks-vk,
+    .socialnetworks-fb {
+        margin: 10px 0;
+    }
+
+
+    .socialnetworks-vk p,
+    .socialnetworks-fb p {
+        line-height: 5px;
+    }
+
+    .renter-group {
+        flex-direction: column;
+    }
+
+    .renter-info {
+        padding: 5px;
+    }
+
+    .renter-info p {
+        font-size: 21px;
+    }
+
+    .menu-hidden--search---suggested {
+      flex-direction: column;
+    }
+
+    .menu-hidden--search---suggested figure {
+      width: 100%;
+    }
+
+}
+
+
+@media all and (max-width:380px) {
+
+    .socialnetworks-intagram .main a {
+        width: 110px;
+    }
+}
+
+@media all and (max-width:350px) {
+
+    .foodcourt figure {
+        max-width: 145px;
+    }
+}

@@ -1,0 +1,175 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// body {
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 320px;
+//   padding: 0;
+//   margin: 0;
+
+//   word-break: break-word;
+// background-color: $body-bg;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: $color-main;
+
+//   &:hover,
+//   &:focus {
+//     color: $color-main;
+//   }
+// }
+
+// ul {
+//   @include list-reset();
+// }
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+button {
+  outline: none;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+section {
+  margin-left: 320px;
+  padding: 0 20px 20px 20px;
+
+  @media all and (max-width: $screen-md) {
+    margin-left: 60px;
+  }
+
+  @media all and (max-width: $screen-450) {
+    margin-left: 0;
+    padding: 10px 5px 5px;
+  }
+}
+
+.promotions-title,
+.whereToGo-title,
+.shops-title,
+.foodcourt-title,
+.supermarket-title,
+.socialnetworks-title,
+.renter-title {
+  font-family: MullerBold;
+  line-height: 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 40px 0 20px;
+  margin: 0;
+
+  @media all and (max-width: $screen-450) {
+    padding: 10px 0 10px;
+  }
+}
+
+.promotions-title {
+  @media all and (max-width: $screen-450) {
+    padding-top: 20px;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background: $white;
+
+  @media all and(max-width: $screen-450) {
+    background: $color-main;
+  }
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+  background: $white;
+
+  @media all and(max-width: $screen-450) {
+    background: $color-main;
+  }
+}
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.body-hidden {
+  overflow: hidden;
+  position: fixed;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #F7F7F7;
+}
+
+#menuhamburger,
+#close {
+  width: 50%;
+  cursor: pointer;
+}
+
+// Helper classes
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

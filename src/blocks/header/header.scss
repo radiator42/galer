@@ -1,0 +1,358 @@
+// В этом файле должны быть стили для БЭМ-блока header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+
+
+
+.header {
+
+  .menu {
+    width: 320px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+
+    @media all and (max-width: $screen-md) {
+      width: auto;
+    }
+
+    @media all and (max-width: $screen-450) {
+      width: 100vw;
+      z-index: 5;
+      height: 60px;
+      position: relative;
+      top: 0;
+    }
+
+    &-item__left {
+      width: 60px;
+      height: 100%;
+      background: #E31E4C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+
+      @media all and (max-width: $screen-450) {
+        width: 100vh;
+        justify-content: space-between;
+        background: $white;
+
+        svg {
+          width: 60px;
+          height: 60px;
+          background: $white;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &-item__right {
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      @media all and (max-width: $screen-md) {
+        display: none;
+      }
+
+      @media all and (max-width: $screen-450) {
+        display: none;
+      }
+
+      .logo {
+        position: absolute;
+        top: 5%;
+
+        svg {
+          width: 100%;
+        }
+      }
+
+      .menu-links {
+        list-style: none;
+        padding-left: 20px;
+        position: absolute;
+        top: calc(100vh - 50% - 100px);
+
+        li {
+          font-family: MullerBold;
+          line-height: 50px;
+          font-size: 30px;
+
+          a {
+            text-decoration: none;
+            color: $color-menu-links;
+          }
+        }
+      }
+
+      .social {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        width: 55%;
+        left: 0;
+        right: 0;
+
+        svg:hover {
+          filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+
+          path[stroke="black"] {
+            stroke: $color-main;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .menu-hidden {
+    display: flex;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: calc(-100vw - 60px);
+    width: calc(100% - 60px);
+    max-width: 1380px;
+    height: 100vh;
+    z-index: 0;
+    background: $color-menu-hidden-bg;
+    margin-left: 60px;
+
+    @media all and (max-width: $screen-450) {
+      margin-left: 0;
+      width: 100vw;
+      position: fixed;
+      height: calc(100% - 60px);
+      overflow: hidden;
+      margin-top: 60px;
+    }
+
+    &.animate-hidden-open {
+      z-index: 1000;
+      left: auto;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: .3s;
+      transition-timing-function: linear;
+      transition-delay: .5s;
+
+      @media all and (max-width: $screen-450) {
+        z-index: 2;
+      }
+    }
+
+    .menu-hidden__right {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 80px 30px 60px 30px;
+      position: relative;
+      overflow: auto;
+
+      @media all and (max-width: $screen-lg) {
+        padding: 10px;
+      }
+
+      @media all and (max-width: $screen-sm) {
+        display: block;
+      }
+
+      @media all and (max-width: $screen-xs) {
+        padding: 5px;
+      }
+
+      .menu-hidden__search {
+        display: block;
+        flex-flow: column nowrap;
+        flex-grow: 1;
+
+        h2 {
+          font-family: MullerBold;
+          line-height: 30px;
+          font-size: 18px;
+          text-transform: uppercase;
+          width: 100%;
+        }
+
+        input {
+          background: #FFFFFF;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 2px;
+          padding: 20px;
+          border: none;
+          width: 100%;
+
+          @media all and (max-width: $screen-xs) {
+            padding: 10px;
+            width: 100%;
+          }
+
+          &:focus {
+            outline: none;
+            box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          &:placeholder-shown {
+            font-family: Muller;
+            line-height: 20px;
+            font-size: 18px;
+            color: #BFBFBF;
+          }
+
+        }
+
+        .menu-hidden__search-suggested {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin: 0 -5px 0 -5px;
+
+          @media all and (max-width: $screen-xs) {
+            justify-content: space-evenly;
+            flex-direction: row;
+          }
+
+          @media all and (max-width: $screen-450) {
+            flex-direction: column;
+          }
+
+          figure {
+            position: relative;
+            text-align: center;
+            margin: 5px;
+
+            @media all and (max-width: $screen-xs) {
+              padding: 0;
+              height: 100px;
+            }
+
+            @media all and (max-width: $screen-450) {
+              width: 100%;
+            }
+          }
+
+          img {
+            border-radius: 4px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            &:hover {
+              box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+              background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+              opacity: .25;
+            }
+          }
+
+          figcaption {
+            position: absolute;
+            font-family: Muller;
+            line-height: 20px;
+            font-size: 14px;
+            top: calc(50% - 10px);
+            text-align: center;
+            left: 0;
+            right: 0;
+          }
+
+          a:hover {
+            color: $color-main;
+
+          }
+
+        }
+      }
+
+      .menu-hidden__links {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 2;
+
+        @media all and (max-width: $screen-xs) {
+          margin-top: 10px;
+          flex-grow: 1;
+        }
+
+        @media all and (max-width: $screen-450) {
+          flex-wrap: wrap;
+        }
+
+        &-group {
+          display: flex;
+          flex-direction: column;
+          font-family: MullerBold;
+
+          @media all and (max-width: $screen-450) {
+            flex-basis: 50%;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+
+          a {
+            line-height: 50px;
+            font-size: 30px;
+
+            &:hover {
+              color: $color-main;
+            }
+
+            @media all and (max-width: $screen-lg) {
+              line-height: 41px;
+              font-size: 24px
+            }
+
+            @media all and (max-width: $screen-md) {
+              line-height: 35px;
+              font-size: 20px;
+            }
+
+            @media all and (max-width: $screen-sm) {
+              line-height: 34px;
+              font-size: 18px;
+            }
+
+            @media all and (max-width: $screen-xs) {
+              line-height: 20px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .menu-hidden__right-social {
+        left: 4%;
+        margin: 0;
+        position: inherit;
+
+        @media all and (max-width: $screen-sm) {
+          left: 0;
+          margin: 0;
+          bottom: auto;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        svg {
+          width: 40px;
+
+          
+
+          @media all and (max-width: $screen-xs) {
+            width: 30px;
+            margin: 0 10px;
+          }
+        }
+      }
+
+
+    }
+  }
+}

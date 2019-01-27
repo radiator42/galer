@@ -1,0 +1,83 @@
+$black: hsl(0, 0%, 0%);
+$gray: hsl(0, 0%, 50%);
+$white: hsl(0, 0%, 100%);
+
+$color-main: #E31E4C;
+$color-menu-links: $black;
+$color-menu-hidden-bg: $white;
+
+$color-success: #38a53d;
+$color-danger: #e73c64;
+$color-warning: #efac4d;
+
+
+
+
+$text-color: $black;
+$text-color--muted: $gray;
+$body-bg: #fff;
+
+$link-color: $color-main;
+// $link-color--hover: $color-main;
+
+
+
+$font-size: 16px;
+// $font-size--h1: 32px;
+// $font-size--h2: 24px;
+// $font-size--h3: 16px;
+// $font-size--h4: 14px;
+// $font-size--h5: 1em;
+// $font-size--h6: 1em;
+// $font-size--small: 14px;
+
+$line-height: 1.65;
+
+$font-family: 'San Francisco',
+-apple-system,
+BlinkMacSystemFont,
+'Roboto',
+'Ubuntu',
+'Droid Sans',
+'Helvetica Neue',
+'Arial',
+sans-serif;
+// $font-family--serif: 'Georgia',
+// 'Times New Roman',
+// 'Times',
+// serif;
+// $font-family--monospace: 'Menlo',
+// 'Monaco',
+// 'Consolas',
+// 'Liberation Mono',
+// 'Courier New',
+// monospace;
+
+$screen-350: 350px;
+$screen-380: 380px;
+$screen-450: 450px;
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-osx: 1440px;
+$screen-xxl: 1600px;
+
+$container-sm: 100%;
+$container-md: 100%;
+$container-lg: 100%;
+$container-xl: 100%;
+$container-xxl: $screen-xxl - 30;
+
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+
+
+$border-radius: 2px;
+// $border-color: $gray;
+$transition-time: 0.3s;
+
+$z-index-modal: 100;
+
+// $header-height: 56px;
