@@ -1,0 +1,190 @@
+// В этом файле должны быть стили для БЭМ-блока rent, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.rent {
+
+  .list {
+    width: 100%;
+  }
+
+
+  h1 {
+    line-height: 60px;
+    font-size: 40px;
+    text-transform: none;
+  }
+
+  .form {
+    position: relative;
+
+    .links {
+      font-family: $font-mullerbold;
+      line-height: 30px;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: underline;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @media all and (max-width: $screen-sm) {
+        position: static;
+        align-items: center;
+      }
+    }
+
+    .tab1,
+    .tab2,
+    .tab3 {
+      width: 50%;
+      background: $white;
+      padding: 40px 20px 80px 40px;
+      position: relative;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      margin-bottom: 10px;
+      height: 640px;
+
+      @media all and (max-width: $screen-sm) {
+        width: 85%;
+        margin: 0 auto;
+      }
+
+      @media all and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+
+    .stages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+
+      .stage {
+        width: 32px;
+        height: 32px;
+        background: #D9D9D9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+
+      .stage-compil {
+        background: $color-main;
+        color: $white;
+      }
+
+      .dash {
+        height: 4px;
+        width: 20px;
+        background: #D9D9D9;
+      }
+
+      .dash-compil {
+        background: $color-main;
+      }
+
+    }
+
+    h2 {
+      text-transform: none;
+      text-align: center;
+      line-height: 30px;
+      font-size: 24px;
+      padding: 0;
+    }
+
+    .width-25 {
+      width: 25%;
+      display: inline-block;
+    }
+
+    textarea {
+      resize: none;
+      width: 100%;
+      border: 1px solid #D9D9D9;
+      height: 60px;
+    }
+
+
+
+    input,
+    label,
+    option,
+    .select {
+      display: block;
+      width: 100%;
+    }
+
+    label {
+      font-family: $font-mullerbold;
+      line-height: 30px;
+      font-size: 12px;
+      margin-top: 10px;
+      position: relative;
+    }
+
+    input,
+    .select {
+      background: $white;
+      border: 1px solid #D9D9D9;
+      border-radius: 2px;
+      height: 40px;
+    }
+
+
+
+    .dalee {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 40px;
+      color: $color-main;
+      line-height: 24px;
+      font-size: 18px;
+    }
+
+
+  }
+
+  .not-necessary:after {
+    content: 'Необязательно';
+    font-family: $font-mullerbold;
+    line-height: 30px;
+    font-size: 12px;
+    letter-spacing: 0.15px;
+    color: #BFBFBF;
+    position: absolute;
+    right: 0;
+  }
+
+  .required {
+    top: 50px;
+    padding: 10px 15px;
+    background: $color-main;
+    color: $white;
+    border-radius: 4px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    font-size: 14px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      border: 10px solid transparent;
+      border-right: 10px solid $color-main;
+      position: absolute;
+      left: -20px;
+    }
+  }
+
+}
+
+// #{$block-name}__element {}

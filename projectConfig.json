@@ -16,7 +16,8 @@
     "shema": [],
     "contacts": [],
     "routes": [],
-    "jobs": []
+    "jobs": [],
+    "rent": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -24,6 +25,7 @@
     "./src/scss/functions.scss",
     "./node_modules/bootstrap/scss/bootstrap-grid.scss",
     "../css/normalize.css",
+    "../css/nice-select.css",
     "./node_modules/slick-carousel/slick/slick.scss",
     "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss"
   ],
@@ -42,7 +44,8 @@
     "./src/img/**/*.{jpg,jpeg,gif,png,svg,ico}"
   ],
   "copiedJs": [
-    "src/js/moment-with-locales.js"
+    "src/js/moment-with-locales.js",
+    "src/js/jquery.nice-select.js"
   ],
   "copiedCss": [],
   "dirs": {

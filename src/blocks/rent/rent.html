@@ -1,0 +1,136 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/rent/rent.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<section class="rent">
+  <h1>Арендаторам</h1>
+
+  <div class="required">
+    Поле не может быть пустым
+  </div>
+
+  <form action="POST" class="form">
+
+
+    <div class="tab1">
+      <h2>Заявка на аренду помещения</h2>
+
+      <div class="stages">
+        <a href="">
+          <div class="stage stage-compil">1</div>
+        </a>
+        <div class="dash"></div>
+        <a href="">
+          <div class="stage">2</div>
+        </a>
+        <div class="dash"></div>
+        <a href="">
+          <div class="stage">3</div>
+        </a>
+      </div>
+
+      <label>Название магазина</label>
+      <input type="text">
+
+      <label class="not-necessary">Сайт компании</label>
+      <input type="text">
+
+      <label>Юридическое лицо</label>
+      <input type="text" required>
+
+      <label>Торговый профиль</label>
+      <select name="select" class="select">
+        <option disabled value="Магазины">Магазины</option>
+        <option value="Магазины">Другое</option>
+        <option value="Магазины">Другое</option>
+      </select>
+
+      <label>Оптимальный размер помещения</label>
+      <input type="text" class="width-25">
+      <span>м</span>
+      <a href="" class="dalee">Далее</a>
+    </div>
+
+    <div class="tab2">
+      <h2>Заявка на аренду помещения</h2>
+
+      <div class="stages">
+        <a href="">
+          <div class="stage stage-compil">1</div>
+        </a>
+        <div class="dash dash-compil"></div>
+        <a href="">
+          <div class="stage stage-compil">2</div>
+        </a>
+        <div class="dash"></div>
+        <a href="">
+          <div class="stage">3</div>
+        </a>
+      </div>
+
+      <label class="not-necessary">Страна происхождения бренда</label>
+      <input type="text">
+
+      <label>Количество магазинов</label>
+      <input type="text">
+
+      <label>Юридическое лицо</label>
+      <input type="text" class="width-25">
+      <span>в сети</span>
+      <input type="text" class="width-25">
+      <span>в Минске</span>
+
+      <label class="not-necessary">Расположение магазинов</label>
+      <textarea></textarea>
+
+      <label>Средний чек магазина</label>
+      <input type="text">
+
+      <a href="" class="dalee">Далее</a>
+    </div>
+
+    <div class="tab3">
+      <h2>Заявка на аренду помещения</h2>
+
+      <div class="stages">
+        <a href="">
+          <div class="stage stage-compil">1</div>
+        </a>
+        <div class="dash dash-compil"></div>
+        <a href="">
+          <div class="stage stage-compil">2</div>
+        </a>
+        <div class="dash dash-compil"></div>
+        <a href="">
+          <div class="stage stage-compil">3</div>
+        </a>
+      </div>
+
+      <label>Имя</label>
+      <input type="text">
+
+      <label>Должность</label>
+      <input type="text" required>
+
+      <label>E-Mail</label>
+      <input type="text" required>
+
+
+      <label>Телефон</label>
+      <input type="text" >
+      <a href="" class="dalee">Отправить</a>
+    </div>
+
+    <div class="links">
+        <a href="">Рекламные возможности</a>
+        <a href="">Скачать презентацию</a>
+      </div>
+  </form>
+</section>

@@ -32,6 +32,7 @@ window.onload = function() {
   //     console.log(this);
   //   })
   // })();
+  $('select').niceSelect();
   (function() {
     var shema = document.querySelectorAll('.shema-svg svg path');
     var pointer = document.querySelector('.pointer');

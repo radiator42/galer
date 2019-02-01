@@ -47,6 +47,7 @@
     .contact-item {
       flex-basis: 33%;
 
+
       h2,
       p {
         padding: 0;
@@ -56,6 +57,10 @@
 
       div {
         margin-bottom: 20px;
+      }
+
+      .questions {
+        width: 60%;
       }
 
       button {

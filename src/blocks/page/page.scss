@@ -6,6 +6,7 @@
 
 * {
   -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 // body {
@@ -151,8 +152,8 @@ figure {
 .category {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 15px -15px;
+  justify-content: space-between;
+  margin: 15px 0;
   flex-wrap: wrap;
 
 
