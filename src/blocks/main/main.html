@@ -145,62 +145,55 @@
 
   <section class="foodcourt">
     <h2 class="foodcourt-title">Фудкорт</h2>
-    <div class="foodcourt-items">
-      <figure>
-        <a href="#">
-          <img src="img/back1.jpg" alt="" class="img-back" href="back1.jpg"><img src="img/smart1.png" alt="" class="img-smart" href="smart1.jpg">
-        </a>
-        <figcaption><a href="">KFC</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="#">
-          <img src="img/back2.jpg" alt="" class="img-back" href="back2.jpg"><img src="img/smart2.png" alt="" class="img-smart" href="smart2.jpg">
-        </a>
-        <figcaption><a href="">Burger King</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back3.jpg" alt="" class="img-back" href="back3.jpg"><img src="img/smart3.png" alt="" class="img-smart" href="smart3.jpg">
-        </a>
-        <figcaption><a href="">Мама Дома</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back4.jpg" alt="" class="img-back" href="back4.jpg"><img src="img/smart4.png" alt="" class="img-smart" href="smart4.jpg">
-        </a>
-        <figcaption><a href="">Work</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back5.jpg" alt="" class="img-back" href="back5.jpg"><img src="img/smart5.png" alt="" class="img-smart" href="smart5.jpg">
-        </a>
-        <figcaption><a href="">Doner House</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back6.jpg" alt="" class="img-back" href="back6.jpg"><img src="img/smart6.png" alt="" class="img-smart" href="smart6.jpg">
-        </a>
-        <figcaption><a href="">Ташир Пицца</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back7.jpg" alt="" class="img-back" href="back7.jpg"><img src="img/smart7.png" alt="" class="img-smart" href="smart7.jpg">
-        </a>
-        <figcaption><a href="">Cinnabon</a></figcaption>
-      </figure>
-
-      <figure>
-        <a href="">
-          <img src="img/back8.jpg" alt="" class="img-back" href="back8.jpg"><img src="img/smart8.png" alt="" class="img-smart" href="smart8.jpg">
-        </a>
-        <figcaption><a href="">Васильки</a></figcaption>
-      </figure>
+    <div class="category">
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back1.jpg",
+      "img-src--smart": "smart1.png",
+      "link": "",
+      "title": "KFC"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back2.jpg",
+      "img-src--smart": "smart2.png",
+      "link": "",
+      "title": "Burger King"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back3.jpg",
+      "img-src--smart": "smart3.png",
+      "link": "",
+      "title": "Мама Дома"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back4.jpg",
+      "img-src--smart": "smart4.png",
+      "link": "",
+      "title": "Work"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back5.jpg",
+      "img-src--smart": "smart5.png",
+      "link": "",
+      "title": "Doner House"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back6.jpg",
+      "img-src--smart": "smart6.png",
+      "link": "",
+      "title": "Ташир Пицца"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back7.jpg",
+      "img-src--smart": "smart7.png",
+      "link": "",
+      "title": "Cinnabon"
+      })
+      @@include('../card-item/card-item.html', {
+      "img-src--back": "back8.jpg",
+      "img-src--smart": "smart8.png",
+      "link": "",
+      "title": "Васильки"
+      })
     </div>
   </section>
 

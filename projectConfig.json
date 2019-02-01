@@ -4,7 +4,19 @@
     "typo": [],
     "sprite-svg": [],
     "header": [],
-    "main": []
+    "main": [],
+    "input": [],
+    "category-item": [],
+    "shops-main": [],
+    "card-item": [],
+    "shops-category__cosmeticks": [],
+    "square-item": [],
+    "search": [],
+    "unfolded-card": [],
+    "shema": [],
+    "contacts": [],
+    "routes": [],
+    "jobs": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -12,6 +24,7 @@
     "./src/scss/functions.scss",
     "./node_modules/bootstrap/scss/bootstrap-grid.scss",
     "../css/normalize.css",
+    "./node_modules/slick-carousel/slick/slick.scss",
     "./node_modules/hamburgers/_sass/hamburgers/hamburgers.scss"
   ],
   "addCssAfter": [],
@@ -19,7 +32,8 @@
   "addJsBefore": [
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/svg4everybody/dist/svg4everybody.js",
-    "./node_modules/object-fit-images/dist/ofi.js"
+    "./node_modules/object-fit-images/dist/ofi.js",
+    "./node_modules/slick-carousel/slick/slick.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

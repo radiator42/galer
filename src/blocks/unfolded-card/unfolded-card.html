@@ -1,0 +1,119 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/unfolded-card/unfolded-card.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<section class="unfolded-card">
+  <h1>L'Occitane en Provence</h1>
+  <div class="unfolded-card__header">
+    <div class="cover">
+      <img src="img/occitane.jpg" alt="occitane">
+    </div>
+    <div class="avatar">
+      <img src="img/occitane-avatar.png" alt="">
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="left-side">
+      <div class="time">
+        <div class="time-work">
+          Время работы
+        </div>
+        <div class="time-oclock">
+          09:00 - 23:00
+        </div>
+      </div>
+
+      <div class="location-floor">
+        <div class="floor-number">
+          1-ый этаж
+        </div>
+        <button type="button">Смотреть на плане</button>
+      </div>
+
+      <div class="phones">
+        <div class="phones-title">
+          Телефоны
+        </div>
+        <p>+375 (29) 125-04-41</p>
+        <p>+375 (17) 316-64-11</p>
+      </div>
+
+      <div class="site">
+        <div class="site-title">
+          Сайт
+        </div>
+        <a href="http://www.loccitane.ru">www.loccitane.ru</a>
+      </div>
+    </div>
+
+    <div class="rigth-side">
+      <h3>Натуральная французская косметика</h3>
+      <p>Бутик натуральной косметики и парфюмерии французского бренда L’Occitane! Марка L’Occitane en Provence была основана 40 лет назад в Провансе, где душистые поля лаванды постоянно напоминают о богатстве природы данного региона.</p>
+      <p>Пройти по французскому искусству жизни через высококачественные и натуральные продукты женской красоты – это наша задача и ради этого мы создали линейки продуктов, вдохновившись урожаями юга Франции и Средиземноморского края. Это приятные ароматы, продукция для ухода за волосами, лицом и телом…</p>
+      <p> Мы знаем, что нужно для Вашей красоты. Откройте своё природное очарование с помощью продукции L’Occitane en Provence! Магазин L’Occitane расположен на 1 этаже ТРЦ «Galleria Minsk»</p>
+    </div>
+  </div>
+
+  <h2>Акции и скидки</h2>
+
+  <div class="category">
+    @@include('../square-item/square-item.html', {
+    "img-src": "skidka1.png",
+    "link": "",
+    "title": ""
+    })
+    @@include('../square-item/square-item.html', {
+    "img-src": "skidka2.png",
+    "link": "",
+    "title": "Ювелирные изделия"
+    })
+    @@include('../square-item/square-item.html', {
+    "img-src": "skidka3.png",
+    "link": "",
+    "title": "Ювелирные изделия"
+    })
+    @@include('../square-item/square-item.html', {
+    "img-src": "skidka4.png",
+    "link": "",
+    "title": "Ювелирные изделия"
+    })
+  </div>
+
+  <h2>Похожие магазины</h2>
+
+  <div class="category">
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "mina.jpg",
+    "img-src--smart": "mina-avatar.png",
+    "link": "",
+    "title": "mina"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "parfumist.jpg",
+    "img-src--smart": "parfumist-avatar.png",
+    "link": "",
+    "title": "Парфюмист"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "craft.jpg",
+    "img-src--smart": "craft-avatar.png",
+    "link": "",
+    "title": "Крафт"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "nyx.jpg",
+    "img-src--smart": "nyx-avatar.png",
+    "link": "",
+    "title": "NYX"
+    })
+  </div>
+
+</section>

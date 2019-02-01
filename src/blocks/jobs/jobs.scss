@@ -1,0 +1,180 @@
+// В этом файле должны быть стили для БЭМ-блока jobs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.jobs {
+  hr {
+    margin: 20px 0;
+    border: none;
+    background: #d8d8d8;
+    height: 1px;
+  }
+
+  .m40 {
+    margin: 40px 0;
+  }
+
+  h1 {
+    line-height: 60px;
+    font-size: 40px;
+    text-transform: none;
+
+    @media all and (max-width: $screen-sm) {
+      margin: 0;
+      font-size: 25px;
+      padding: 0;
+    }
+  }
+
+  .nav-batton {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media all and (max-width: $screen-sm) {
+      margin-bottom: 20px;
+
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        margin-right: 5px;
+      }
+    }
+
+    @media all and (max-width: $screen-xs) {
+      button {
+        padding: 5px;
+        border-radius: 15px;
+      }
+    }
+
+    @media all and (max-width: $screen-380) {
+      button {
+        font-size: 14px;
+      }
+    }
+
+    button {
+      background: #d9d9d9;
+      font-weight: 500;
+      padding: 10px 15px;
+      border-radius: 20px;
+      color: $black;
+      margin-right: 20px;
+      margin-bottom: 0;
+
+      &:hover {
+        background: $color-main;
+        color: $white;
+      }
+    }
+  }
+
+  .jobs-card {
+    background: $white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    .jobs-card__header {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        margin-right: 20px;
+      }
+
+      .jobs-card__title {
+        .title-Galleria {
+          line-height: 20px;
+          font-size: 14px;
+        }
+
+        .jobs-title {
+          line-height: 24px;
+          font-size: 18px;
+          font-family: $font-mullerbold;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 0;
+        border: none;
+        padding: 0;
+        background: url(../img/+.svg);
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+
+    .jobs-card__slide {
+      hr {
+        margin: 20px 0;
+        border: none;
+        background: #d8d8d8;
+        height: 1px;
+      }
+
+      h3 {
+        font-family: $font-muller;
+        font-weight: normal;
+      }
+
+      .important {
+        font-family: $font-mullerbold;
+        line-height: 24px;
+        font-size: 18px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+
+  button {
+    font-family: $font-muller;
+    font-size: 18px;
+    text-align: center;
+    color: $white;
+    background: $color-main;
+    border-radius: 2px;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .jobs-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .jobs-footer__item {
+      flex-basis: 20%;
+
+      @media all and (max-width: $screen-sm) {
+        flex-basis: 50%;
+
+        &:nth-child(n+3) {
+          margin-top: 10px;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      span {
+        color: $color-main;
+      }
+    }
+  }
+
+  // #{$block-name}__element {}
+}

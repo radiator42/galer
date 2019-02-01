@@ -1,4 +1,4 @@
-  @font-face{
+  @font-face {
 
     font-family: 'Muller';
 
@@ -6,11 +6,11 @@
 
     src: url('../fontsMullerRegulard.eot?iefix') format('eot'),
 
-    url('../fonts/MullerRegular.woff') format('woff'),
+      url('../fonts/MullerRegular.woff') format('woff'),
 
-    url('../fonts/MullerRegular.ttf') format('truetype'),
+      url('../fonts/MullerRegular.ttf') format('truetype'),
 
-    url('../fonts/MullerRegular.svg#webfont') format('svg');
+      url('../fonts/MullerRegular.svg#webfont') format('svg');
 
     font-weight: normal;
 
@@ -20,7 +20,7 @@
 
   }
 
-@font-face{
+  @font-face {
 
     font-family: 'MullerBold';
 
@@ -28,11 +28,11 @@
 
     src: url('../fonts/MullerBold.eot?iefix') format('eot'),
 
-    url('../fonts/MullerBold.woff') format('woff'),
+      url('../fonts/MullerBold.woff') format('woff'),
 
-    url('../fonts/MullerBold.ttf') format('truetype'),
+      url('../fonts/MullerBold.ttf') format('truetype'),
 
-    url('../fonts/MullerBold.svg#webfont') format('svg');
+      url('../fonts/MullerBold.svg#webfont') format('svg');
 
     font-weight: 500;
 
@@ -46,68 +46,94 @@
   $font-muller: 'Muller';
   $font-mullerbold: 'MullerBold';
 
-body {
-  line-height: $line-height;
-  font-family: $font-muller;
-  color: $text-color;
-  // letter-spacing: ;
-}
+  body {
+    line-height: $line-height;
+    font-family: $font-muller;
+    color: $text-color;
+    // letter-spacing: ;
+  }
 
-h1 {
-  // font-size: $font-size--h1;
-  // font-weight: 700;
-  // line-height: ;
-}
+  h1 {
+    font-family: $font-mullerbold;
+    line-height: 30px;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 40px 0 20px;
+    margin: 0;
+    color: $black;
 
-h2 {
-  // font-size: ($font-size--h2);
-  // font-weight: 700;
-  // line-height: ;
-}
+    @media all and (max-width: $screen-450) {
+      padding: 10px 0;
+      font-size: 18px;
+    }
 
-h3 {
-  // font-size: $font-size--h3;
-  // font-weight: 700;
-  // line-height: ;
-}
+    &:first-child {
+      padding-top: 20px;
+    }
+  }
 
-h4 {
-  // font-size: $font-size--h4;
-  // font-weight: 700;
-  // line-height: ;
-}
+  h2 {
+    font-size: $font-size--h2;
+    font-family: $font-mullerbold;
+    line-height: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 40px 0 20px;
+    margin: 0;
+    color: $black;
 
-h5 {
-  // font-size: $font-size--h5;
-  // font-weight: 700;
-  // line-height: ;
-}
+    @media all and (max-width: $screen-450) {
+      padding: 10px 0;
+    }
 
-h6 {
-  // font-size: $font-size--h6;
-  // font-weight: 700;
-  // line-height: ;
-}
+    &:first-child {
+      padding-top: 20px;
+    }
+  }
 
-small {
-  // font-size: $font-size--small;
-}
+  h3 {
+    // font-size: $font-size--h3;
+    // font-weight: 700;
+    // line-height: ;
+  }
 
-sub,
-sup {
-  font-size: 70%;
-}
+  h4 {
+    // font-size: $font-size--h4;
+    // font-weight: 700;
+    // line-height: ;
+  }
 
-mark {
-  background: $color-main;
-  // padding: ;
-}
+  h5 {
+    // font-size: $font-size--h5;
+    // font-weight: 700;
+    // line-height: ;
+  }
 
-b,
-strong {
-  // font-weight: ;
-}
+  h6 {
+    // font-size: $font-size--h6;
+    // font-weight: 700;
+    // line-height: ;
+  }
 
-button {
-  font-family: $font-family;
-}
+  small {
+    // font-size: $font-size--small;
+  }
+
+  sub,
+  sup {
+    font-size: 70%;
+  }
+
+  mark {
+    background: $color-main;
+    // padding: ;
+  }
+
+  b,
+  strong {
+    // font-weight: ;
+  }
+
+  button {
+    font-family: $font-muller;
+  }

@@ -1,0 +1,27 @@
+// В этом файле должны быть стили для БЭМ-блока shops-main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.shops-main {
+
+  .input {
+    &:before {
+      top: -100%;
+    }
+  }
+
+  .slick-category {
+    padding: 0 15px;
+  }
+
+  .category {
+
+    figure {
+      padding: 3px;
+
+    }
+  }
+
+  // #{$block-name}__element {}
+
+}

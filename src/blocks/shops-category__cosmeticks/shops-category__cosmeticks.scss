@@ -1,0 +1,22 @@
+// В этом файле должны быть стили для БЭМ-блока shops-category, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.shops-category__cosmeticks {
+
+  h1 {
+    line-height: 60px;
+    font-size: 40px;
+  }
+
+  .category {
+    justify-content: flex-start;
+
+    @media all and (max-width: $screen-xs) {
+      justify-content: space-evenly;
+    }
+  }
+
+  // #{$block-name}__element {}
+
+}

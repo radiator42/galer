@@ -10,9 +10,6 @@ $color-success: #38a53d;
 $color-danger: #e73c64;
 $color-warning: #efac4d;
 
-
-
-
 $text-color: $black;
 $text-color--muted: $gray;
 $body-bg: #fff;
@@ -24,7 +21,10 @@ $link-color: $color-main;
 
 $font-size: 16px;
 // $font-size--h1: 32px;
-// $font-size--h2: 24px;
+
+$font-size--h2: 18px;
+$line-height--h2: 30px;
+
 // $font-size--h3: 16px;
 // $font-size--h4: 14px;
 // $font-size--h5: 1em;
@@ -33,25 +33,6 @@ $font-size: 16px;
 
 $line-height: 1.65;
 
-$font-family: 'San Francisco',
--apple-system,
-BlinkMacSystemFont,
-'Roboto',
-'Ubuntu',
-'Droid Sans',
-'Helvetica Neue',
-'Arial',
-sans-serif;
-// $font-family--serif: 'Georgia',
-// 'Times New Roman',
-// 'Times',
-// serif;
-// $font-family--monospace: 'Menlo',
-// 'Monaco',
-// 'Consolas',
-// 'Liberation Mono',
-// 'Courier New',
-// monospace;
 
 $screen-350: 350px;
 $screen-380: 380px;

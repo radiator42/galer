@@ -1,0 +1,23 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/square-item/square-item.html', {
+  "img-src": "",
+  "link": "",
+  "title": ""
+})
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<div class="square-item">
+  <figure>
+    <a href="@@link">
+      <img src="img/@@img-src" alt="">
+      <figcaption><a href="@@link">@@title</a></figcaption>
+    </a>
+  </figure>
+</div>

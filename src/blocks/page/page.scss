@@ -54,6 +54,12 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #F7F7F7;
+}
+
 section {
   margin-left: 320px;
   padding: 0 20px 20px 20px;
@@ -68,30 +74,30 @@ section {
   }
 }
 
-.promotions-title,
-.whereToGo-title,
-.shops-title,
-.foodcourt-title,
-.supermarket-title,
-.socialnetworks-title,
-.renter-title {
-  font-family: MullerBold;
-  line-height: 30px;
-  font-size: 18px;
-  text-transform: uppercase;
-  padding: 40px 0 20px;
-  margin: 0;
+// .promotions-title,
+// .whereToGo-title,
+// .shops-title,
+// .foodcourt-title,
+// .supermarket-title,
+// .socialnetworks-title,
+// .renter-title {
+//   font-family: MullerBold;
+//   line-height: 30px;
+//   font-size: 18px;
+//   text-transform: uppercase;
+//   padding: 40px 0 20px;
+//   margin: 0;
 
-  @media all and (max-width: $screen-450) {
-    padding: 10px 0 10px;
-  }
-}
+//   @media all and (max-width: $screen-450) {
+//     padding: 10px 0 10px;
+//   }
+// }
 
-.promotions-title {
-  @media all and (max-width: $screen-450) {
-    padding-top: 20px;
-  }
-}
+// .promotions-title {
+//   @media all and (max-width: $screen-450) {
+//     padding-top: 20px;
+//   }
+// }
 
 .hamburger-inner,
 .hamburger-inner:after,
@@ -133,19 +139,49 @@ figure {
 
 .body-hidden {
   overflow: hidden;
-  position: fixed;
 }
 
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-  background: #F7F7F7;
-}
 
 #menuhamburger,
 #close {
   width: 50%;
   cursor: pointer;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 15px -15px;
+  flex-wrap: wrap;
+
+
+  @media all and (max-width: $screen-xs) {
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  @media all and (max-width: $screen-450) {
+    // flex-direction: column;
+    margin: 10px;
+  }
+}
+
+.social {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  max-width: 55%;
+  left: 0;
+  right: 0;
+
+  svg:hover {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+
+    path[stroke="black"] {
+      stroke: $color-main;
+    }
+  }
 }
 
 // Helper classes

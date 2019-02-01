@@ -1,0 +1,70 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/shops-category/shops-category.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<section class="shops-category">
+  <h1>Косметика</h1>
+  @@include('../input/input.html', {
+  "placeholder": "Название магазина или категории…"
+  })
+  <div class="category">
+
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "mina.jpg",
+    "img-src--smart": "mina-avatar.png",
+    "link": "",
+    "title": "mina"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "Provence.jpg",
+    "img-src--smart": "Provence-avatar.png",
+    "link": "",
+    "title": "L'Occitane en Provence"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "craft.jpg",
+    "img-src--smart": "craft-avatar.png",
+    "link": "",
+    "title": "Крафт"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "nyx.jpg",
+    "img-src--smart": "nyx-avatar.png",
+    "link": "",
+    "title": "NYX"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "mila.jpg",
+    "img-src--smart": "mila-avatar.png",
+    "link": "",
+    "title": "Мила"
+    })
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "parfumist.jpg",
+    "img-src--smart": "parfumist-avatar.png",
+    "link": "",
+    "title": "Парфюмист"
+    })
+  </div>
+
+  <h2>Смотрите также</h2>
+  <div class="seealso category">
+    @@include('../square-item/square-item.html', {
+    "img-src": "pharmacy.jpg",
+    "link": "",
+    "title": "Аптеки"
+    })
+    @@include('../square-item/square-item.html', {
+    "img-src": "jewelry.jpg",
+    "link": "",
+    "title": "Ювелирные изделия"
+    })
+  </div>
+</section>

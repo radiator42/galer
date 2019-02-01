@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.search {
+
+  h1 {
+    line-height: 60px;
+    font-size: 40px;
+
+    @media all and (max-width: $screen-450) {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+
+  .input {
+    &:before {
+      @media all and (max-width: $screen-450) {
+        top: -150%;
+      }
+    }
+  }
+
+  h2 {
+    padding: 20px 0;
+    text-transform: none;
+  }
+
+  .search-dinamik {}
+
+  .category {
+    justify-content: flex-start
+  }
+}
+
+// #{$block-name}__element {}

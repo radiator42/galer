@@ -1,0 +1,27 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/search/search.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<section class="search">
+  <h1>Поиск по магазинам</h1>
+  @@include('../input/input.html', {
+  "placeholder": "Название магазина или категории…"
+  })
+
+  <h2 class="search-dinamik">Найдено 1 совпадение</h2>
+  <div class="category">
+    @@include('../card-item/card-item.html', {
+    "img-src--back": "mina.jpg",
+    "img-src--smart": "mina-avatar.png",
+    "link": "",
+    "title": "mina"
+    })
+  </div>
+</section>
