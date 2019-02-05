@@ -412,7 +412,7 @@ gulp.task("default", ["serve"]);
 gulp.task("serve", ["build"], function() {
   browserSync.init({
     server: dirs.buildPath,
-    startPath: "rent1.html",
+    startPath: "about.html",
     open: false,
     port: 8080
   });

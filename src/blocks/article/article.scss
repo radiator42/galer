@@ -1,0 +1,53 @@
+// В этом файле должны быть стили для БЭМ-блока article, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.article {
+
+  .wraper-cover {
+    position: relative;
+  }
+
+  .main {
+    width: 75%;
+    padding: 50px 20px 20px;
+
+    @media all and (max-width: $screen-xs) {
+      width: 100%;
+      padding: 20px;
+
+    }
+
+    h1 {
+      padding: 0 0 20px 0;
+    }
+
+
+
+    p {
+      margin: 0 0 24px 0;
+    }
+
+    .icon-soc {
+      i {
+        color: $color-main;
+        line-height: 40px;
+        font-size: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  h2 {
+    padding: 0 0 0 20px;
+  }
+
+  .category {
+    justify-content: space-around;
+
+    figcaption {
+      display: none;
+    }
+  }
+
+}

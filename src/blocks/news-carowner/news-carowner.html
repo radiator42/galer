@@ -1,0 +1,46 @@
+<!--DEV
+
+Для использования этого файла как шаблона:
+
+@ @include('blocks/news-carowner/news-carowner.html')
+
+(Нужно убрать пробел между символами @)
+Подробнее: https://www.npmjs.com/package/gulp-file-include
+
+-->
+
+<section class="news-carowner">
+  <h1>Новости для автовладельцев!</h1>
+  <p>С 1 августа услуги паркинга ТРЦ Galleria Minsk оплачиваются с первой минуты!</p>
+  <ul>
+    <li>Тариф на паркинг:</li>
+    <li>2 BYN - первые 4 часа</li>
+    <li>1 BYN - каждый следующий час</li>
+  </ul>
+  <ul>
+    <li>Абонемент на месяц:</li>
+    <li>120 BYN</li>
+  </ul>
+  <hr>
+  <div class="icon-soc">
+    <a href=""><i class="zmdi zmdi-facebook"></i></a>
+    <a href=""><i class="zmdi zmdi-vk"></i></a>
+    <a href=""><i class="zmdi zmdi-twitter"></i></a>
+  </div>
+  <div class="category">
+    @@include('../square-item/square-item.html', {
+    "img-src": "news1.png",
+    "link": "",
+    "title": ""
+    })
+    @@include('../square-item/square-item.html', {
+    "img-src": "news2.png",
+    "link": "",
+    "title": ""
+    })
+    @@include('../rect-text/rect-text.html', {
+      "title": "Награждение победителей рекламной игры «Шоппинг в Милане»",
+      "date": "22 сентября"
+    })
+  </div>
+</section>

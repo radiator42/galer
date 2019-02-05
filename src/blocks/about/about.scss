@@ -1,0 +1,168 @@
+// В этом файле должны быть стили для БЭМ-блока about, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about {
+  h1 {
+    line-height: 60px;
+    font-size: 40px;
+    text-transform: none;
+
+    @media all and (max-width: $screen-md) {
+      font-size: 25px;
+      line-height: 25px;
+    }
+  }
+
+  .main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (max-width: $screen-sm) {
+      flex-direction: column-reverse;
+    }
+
+    .main-left {
+      width: 70%;
+
+      @media all and (max-width: $screen-sm) {
+        width: 100%;
+      }
+
+      h2 {
+        padding: 0 0 20px 0;
+        line-height: 30px;
+        font-size: 24px;
+        text-transform: none;
+
+        @media all and (max-width: $screen-md) {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      .block {
+        background: $white;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        margin-bottom: 20px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+
+        @media all and (max-width: $screen-450) {
+          padding: 0;
+
+        }
+
+        &:hover {
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1),
+            0px 2px 4px rgba(0, 0, 0, 0.1);
+
+          svg path,
+          svg rect {
+            stroke: $color-main;
+          }
+
+          svg path[fill="black"] {
+            fill: $color-main;
+          }
+        }
+
+        .svg {
+          width: 120px;
+          height: 120px;
+          margin-right: 40px;
+
+          @media all and (max-width: $screen-450) {
+            margin-right: 10px;
+          }
+        }
+
+        p {
+          line-height: 24px;
+          font-size: 18px;
+          font-family: $font-muller;
+        }
+      }
+    }
+
+
+
+    hr {
+      margin: 40px 0;
+    }
+
+    .brands {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      img {
+        margin-bottom: 10px;
+        background: transparent;
+      }
+    }
+  }
+
+  .main-right {
+    position: fixed;
+    width: 25%;
+    right: 0;
+
+    @media all and (max-width: $screen-xxl) {
+      right: -5%
+    }
+
+    @media all and (max-width: $screen-md) {
+      right: -1%;
+    }
+
+    @media all and (max-width: $screen-sm) {
+      position: static;
+      width: 100%;
+    }
+
+
+    .links {
+      font-family: $font-mullerbold;
+      line-height: 30px;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      text-decoration: underline;
+
+      @media all and (max-width: $screen-sm) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      @media all and (max-width: $screen-450) {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    }
+
+    button {
+      background: $color-main;
+      border: none;
+      border-radius: 4px;
+      padding: 15px 22px;
+      color: $white;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 18px;
+
+      @media all and (max-width: $screen-sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока news, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.news {
+
+  .nav-batton {
+    button:hover a {
+      color: $white;
+    }
+  }
+
+  .category {
+    margin: 15px -20px;
+    justify-content: space-between;
+
+    figcaption {
+      display: none;
+    }
+  }
+}

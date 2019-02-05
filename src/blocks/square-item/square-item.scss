@@ -3,38 +3,75 @@
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
 .square-item {
+  width: 240px;
+  height: 240px;
+  flex-grow: 1;
+  margin:20px;
+  max-width: 400px;
+
+  @media all and (max-width: $screen-sm) {
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media all and (max-width: $screen-xs) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media all and (max-width: $screen-450) {
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+
+    a {
+      color: #e31e4c;
+    }
+  }
 
   figure {
-    max-height: 240px;
+    width: 100%;
+    height: 100%;
     border-radius: 4px;
-    width: 240px;
-    margin: 15px;
 
     @media all and (max-width: $screen-xs) {
-      max-width: 100%;
+      max-height: 200px;
+
     }
 
     @media all and (max-width: $screen-450) {
-      margin: 5px;
+      max-height: 150px;
+
     }
 
-    &:hover {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-      a {
-        color: #e31e4c;
-      }
-    }
-
-    img {
-      border-top-left-radius: 4px;
-      border-top-right-radius: 4px;
+    a {
       display: block;
       width: 100%;
-      max-height: 200px;
+      height: 100%;
 
-      &::hover {
-        filter: blur(1px);
+      img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        display: block;
+        width: 100%;
+        max-height: 240px;
+        height: 100%;
+        object-fit: cover;
+        // object-position: left top;
+
+        @media all and (max-width: $screen-450) {
+          max-height: 150px;
+        }
+
+        &:hover {
+          filter: blur(1px);
+        }
       }
     }
 

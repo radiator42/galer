@@ -17,7 +17,17 @@
     "contacts": [],
     "routes": [],
     "jobs": [],
-    "rent": []
+    "rent": [],
+    "article": [],
+    "rect-item": [],
+    "news-carowner": [],
+    "news": [],
+    "rect-text": [],
+    "square-text": [],
+    "about": [],
+    "marketing": [],
+    "giveaway": [],
+    "giveaway-result": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -47,7 +57,9 @@
     "src/js/moment-with-locales.js",
     "src/js/jquery.nice-select.js"
   ],
-  "copiedCss": [],
+  "copiedCss": [
+    "src/css/material-design-iconic-font.min.css"
+  ],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",
